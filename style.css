@@ -428,7 +428,7 @@ button {
 
 .hero-subtitle {
     font-family: var(--font-heading);
-    font-size: 1.375rem;
+    font-size: clamp(0.9rem, 1.8vw, 1.375rem);
     font-weight: 500;
     color: var(--accent-academic);
     margin-bottom: 24px;
@@ -1763,16 +1763,5 @@ a.detail-val:hover {
     .footer-content {
         flex-direction: column;
         text-align: center;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.05rem;
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-subtitle {
-        font-size: 0.88rem;
     }
 }
