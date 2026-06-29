@@ -194,6 +194,42 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", scrollSpy);
     // Trigger scroll spy on page load to set correct initial active link
     scrollSpy();
+
+    // Typewriter Effect
+    const typewriterElement = document.getElementById("typewriter");
+    if (typewriterElement) {
+        const words = ["Cloud Computing", "Fog Computing", "Internet of Things (IoT)", "Machine Learning"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        const type = () => {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            let typeSpeed = isDeleting ? 50 : 100;
+            
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 1500; // Pause at full word
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500; // Pause before typing next word
+            }
+            
+            setTimeout(type, typeSpeed);
+        };
+        
+        // Start typing
+        type();
+    }
 });
 
 // --------------------------------------------------------------------------
