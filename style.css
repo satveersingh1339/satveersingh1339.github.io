@@ -514,6 +514,20 @@ a.contact-badge-item:hover {
     height: 18px;
 }
 
+.cv-btn {
+    background-color: var(--text-primary);
+    color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.cv-btn:hover {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.4);
+}
+
 .scholar-btn {
     background: var(--gradient-accent);
     color: #ffffff;
