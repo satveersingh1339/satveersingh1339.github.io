@@ -494,17 +494,17 @@ a.contact-badge-item:hover {
 .portal-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 10px;
 }
 
 .portal-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 24px;
+    gap: 8px;
+    padding: 10px 16px;
     border-radius: var(--border-radius-sm);
     font-weight: 600;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-smooth);
 }
