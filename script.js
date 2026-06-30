@@ -296,3 +296,18 @@ styleSheet.innerText = `
 }
 `;
 document.head.appendChild(styleSheet);
+
+// Expandable Abstract Handler for Patents
+function toggleAbstract(button) {
+    button.classList.toggle("active");
+    const content = button.nextElementSibling;
+    const isHidden = content.classList.contains("hidden");
+    
+    if (isHidden) {
+        content.classList.remove("hidden");
+        button.querySelector("span").textContent = "Hide Abstract";
+    } else {
+        content.classList.add("hidden");
+        button.querySelector("span").textContent = "Show Abstract";
+    }
+}

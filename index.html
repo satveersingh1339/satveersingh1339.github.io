@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS Link -->
-    <link rel="stylesheet" href="style.css?v=2.5">
+    <link rel="stylesheet" href="style.css?v=2.6">
     
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -44,6 +44,7 @@
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#publications" class="nav-link">Publications</a>
+                <a href="#patents" class="nav-link">Patents</a>
                 <a href="#teaching" class="nav-link">Teaching & Skills</a>
                 <a href="#achievements" class="nav-link">Achievements</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -466,8 +467,55 @@
             </div>
         </section>
 
+        <!-- Patents Section -->
+        <section id="patents" class="section-padding scroll-margin alternate-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-pretitle">Intellectual Property</span>
+                    <h2 class="section-title">Patents</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="patents-grid">
+                    <!-- Patent Card 1 -->
+                    <div class="patent-card">
+                        <div class="patent-icon-wrapper">
+                            <i data-lucide="file-check"></i>
+                        </div>
+                        <div class="patent-content">
+                            <span class="patent-status">Published Application</span>
+                            <h3 class="patent-title">"Deploying Fog Infrastructure for Intelligent University Systems: A Metaheuristic Optimization Approach"</h3>
+                            <p class="patent-number"><strong>Indian Patent Application No:</strong> 202511071778 A</p>
+                            
+                            <div class="patent-details-row">
+                                <span class="patent-detail-item"><i data-lucide="calendar"></i> <strong>Filing Date:</strong> 29/07/2025</span>
+                                <span class="patent-detail-item"><i data-lucide="eye"></i> <strong>Publication Date:</strong> 05/09/2025</span>
+                                <span class="patent-detail-item"><i data-lucide="book-open"></i> <strong>Journal No:</strong> 36/2025 (Page 85069)</span>
+                            </div>
+
+                            <div class="patent-people">
+                                <p><strong>Inventor:</strong> Dr. Satveer Singh <span class="affiliation-note">(Dept. of IoT and Intelligent Systems, Manipal University Jaipur)</span></p>
+                                <p><strong>Applicant:</strong> Manipal University Jaipur</p>
+                            </div>
+
+                            <!-- Expandable Abstract -->
+                            <div class="patent-abstract-container">
+                                <button class="abstract-toggle-btn" onclick="toggleAbstract(this)">
+                                    <span>Show Abstract</span>
+                                    <i data-lucide="chevron-down"></i>
+                                </button>
+                                <div class="patent-abstract-content hidden">
+                                    <p>The present invention relates to a system and method for optimal Fog Node Deployment (FND) to support real-time, latency-sensitive digital services in a university environment. The system comprises three-layer fog-cloud architecture comprising IoT devices, fog nodes, and central cloud servers; and JAYA GA, a novel hybrid algorithm that fuses the parameter-light JAYA optimizer with the exploratory strengths of GA. Traditional cloud-based solutions often fail to meet performance requirements due to high Network Delay (ND). To address this, the invention introduces a hybrid metaheuristic optimization technique, JAYA-GA, for efficient deployment of fog nodes at the edge of network. The method formulates FND as a linear multi-objective optimization problem aimed at minimizing Installation Cost (IC) and ND. The present system combines the exploitation capability of the JAYA algorithm with the exploration strength of Genetic Algorithm (GA) to solve this NP-hard problem efficiently. Simulations demonstrate that the invention outperforms conventional metaheuristics including Particle Swarm Optimization (PSO), GA, and JAYA in terms of fitness value, convergence rate, and computation time. A case study focused on university digitalization is used to validate the invention, enabling deployment of a scalable, responsive, and cost-effective smart university infrastructure. The system is adaptable, allowing dynamic reconfiguration to accommodate evolving digital campus needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Teaching & Skills Section -->
-        <section id="teaching" class="section-padding alternate-bg scroll-margin">
+        <section id="teaching" class="section-padding scroll-margin">
             <div class="container">
                 <div class="teaching-skills-grid">
                     <!-- Courses Taught -->
@@ -897,7 +945,7 @@
     </footer>
 
     <!-- JS Scripts -->
-    <script src="script.js?v=2.5"></script>
+    <script src="script.js?v=2.6"></script>
     <script>
         // Init Lucide Icons
         lucide.createIcons();
